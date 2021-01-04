@@ -7,7 +7,7 @@ module Day02
       passwords = raw.split("\n").map { |p| Password.new(p) }
     end
 
-    passwords.select{ |p| p.is_valid_password? }.count
+    passwords.select { |p| p.is_valid_password? }.count
   end
 
   def self.part_two(real_data: true)
@@ -16,10 +16,9 @@ module Day02
       passwords = raw.split("\n").map { |p| Password.new(p) }
     end
 
-    passwords.select{ |p| p.is_valid_password2? }.count
+    passwords.select { |p| p.is_valid_password2? }.count
   end
 end
-
 
 class Password
   attr_reader :password_policy
@@ -43,8 +42,8 @@ class Password
     positions = positions.split("-").map { |v| v.to_i }
     letter.gsub!(/:/, "")
 
-    first_letter = password[positions.first-1]
-    second_letter = password[positions.last-1]
+    first_letter = password[positions.first - 1]
+    second_letter = password[positions.last - 1]
 
     first_letter != second_letter && (first_letter == letter || second_letter == letter)
   end
