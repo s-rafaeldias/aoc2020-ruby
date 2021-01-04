@@ -3,7 +3,7 @@ require_relative "inputs"
 module Day02
   def self.part_one(real_data: true)
     passwords = []
-    Inputs.get_inputs(2, real_data: real_data) do |raw|
+    Inputs.get(2, real_data: real_data) do |raw|
       passwords = raw.split("\n").map { |p| Password.new(p) }
     end
 
@@ -12,7 +12,7 @@ module Day02
 
   def self.part_two(real_data: true)
     passwords = []
-    Inputs.get_inputs(2, real_data: real_data) do |raw|
+    Inputs.get(2, real_data: real_data) do |raw|
       passwords = raw.split("\n").map { |p| Password.new(p) }
     end
 
