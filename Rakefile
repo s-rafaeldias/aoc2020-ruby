@@ -21,3 +21,7 @@ end
 task :day3 do
   ruby "test/test_day03.rb"
 end
+
+task :day4 do
+  ruby "test/test_day04.rb"
+end
